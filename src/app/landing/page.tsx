@@ -3,7 +3,7 @@ import React from 'react'
 
 function Landing() {
   return (
-    <div>
+    <div className='main-div'>
         <SignInButton/>
         <SignUpButton/>
     </div>
