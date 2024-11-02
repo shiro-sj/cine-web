@@ -18,6 +18,8 @@ model User {
   username          String
   clerkId           String            @unique
   email             String            @unique
+  profileImage      String
+  createdAt         DateTime
   watchHistory      WatchHistory[]
   friends           Friend[]          @relation("Friends_user")
   friendOf          Friend[]          @relation("Friends_friend")
