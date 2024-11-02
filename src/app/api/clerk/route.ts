@@ -13,7 +13,7 @@ export async function POST(request: Request) {
 
     // Creating a new user
     if (eventType === 'user.created') {
-      const { id, email_addresses, username, image_url, created_at, last_active_at } = evt.data;
+      const { id, email_addresses, username, image_url, created_at} = evt.data;
       if (!id || !email_addresses || !email_addresses[0]?.email_address) {
         return new Response('Error occurred -- missing data.', { status: 400 });
       }
